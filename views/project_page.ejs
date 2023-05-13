@@ -1,0 +1,12 @@
+<div class="w-50 mt-5 m-auto bg-light p-4 rounded-3" style="box-shadow: 0 0 4px 1px rgb(214, 214, 214);">
+    <h3 class="m-2 p-2 border-bottom border-2">
+      Project : <%= project.name %>
+    </h3>
+    <h4 class="m-2 p-2 border-bottom border-2">
+      Author : <%= project.author %>
+    </h4>
+    <h5 class="m-2 p-2 border-bottom border-2">
+      Description : <%= project.description %>
+    </h5>
+  </div>
+  <%-include('./partials/_issues'); %>
