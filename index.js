@@ -1,14 +1,17 @@
 const express = require('express');
 const app = express();
 
+// load config from dot env file
 require('dotenv').config();
 const port = process.env.PORT || 8000;
 
+// connect to the database
 const db = require('./config/mongoose');
 db();
 
 const expressLayouts = require('express-ejs-layouts');
 
+// middleware to parse html request body
 app.use(express.urlencoded());
 app.use(express.static('assets'));
 app.use(expressLayouts);
@@ -24,7 +27,7 @@ app.use('/',require('./routes/index'));
 app.set('view engine','ejs');
 app.set('views','./views');
 
-
+// start server
 app.listen(port, function (error) {
   if (error) {
     console.log(`Error in running the server: ${error}`);
