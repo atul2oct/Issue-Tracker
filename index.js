@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
 // load config from dot env file
 require('dotenv').config();
