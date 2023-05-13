@@ -1,0 +1,23 @@
+<div class="mb-5 p-5">
+    <% for( let project of projects ) { %>
+    <div class="card mb-2 w-50 m-auto">
+      <div class="card-header" style="background-color: rgb(206, 220, 233);">
+        <strong> Name of the project : </strong><%= project.name %>
+      </div>
+      <div class="card-body" style="background-color: rgb(237, 243, 255);">
+        <h6 class="card-subtitle mb-2 text-muted">
+          <strong> Author : </strong> <%= project.author %>
+        </h6>
+        <p class="card-text">
+          <strong> Description : </strong><%= project.description %>
+        </p>
+  
+        <div class="m-auto text-end">
+          <a href="/project/<%=project._id%>" class="btn btn-primary m-auto"
+            >Open project</a
+          >
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
